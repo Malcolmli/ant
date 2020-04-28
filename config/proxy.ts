@@ -10,14 +10,14 @@ export default {
     '/api/': {
       target: 'http://47.96.140.86:8050/',
       changeOrigin: true,
-      pathRewrite: { '^': '' },
+      pathRewrite: { '^/api': '' },
     },
   },
   test: {
     '/api/': {
       target: 'http://47.96.140.86:8050/',
       changeOrigin: true,
-      pathRewrite: { '^': '' },
+      pathRewrite: { '^/api': '' },
     },
   },
   pre: {

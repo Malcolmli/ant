@@ -3,6 +3,7 @@ import React, { useState, useRef } from 'react';
 import { PageHeaderWrapper } from '@ant-design/pro-layout';
 import ProTable, { ProColumns, ActionType } from '@ant-design/pro-table';
 import { SorterResult } from 'antd/es/table/interface';
+import moment from 'moment';
 
 import { TableListItem } from './data.d';
 import { queryRule } from './service';
@@ -10,6 +11,7 @@ import { queryRule } from './service';
 
 const TableList: React.FC<{}> = () => {
   const [sorter, setSorter] = useState<string>('');
+  const [date, setDate] = useState<string>(moment().subtract(1, 'day').format("YYYYMMDD"));
   const actionRef = useRef<ActionType>();
   const columns: ProColumns<TableListItem>[] = [
     {
@@ -73,6 +75,7 @@ const TableList: React.FC<{}> = () => {
         }}
         params={{
           sorter,
+          date,
         }}
         tableAlertRender={({ selectedRowKeys, selectedRows }) => (
           <div>

@@ -2,7 +2,7 @@ import { request } from 'umi';
 import { TableListParams, TableListItem } from './data.d';
 
 export async function queryRule(params?: TableListParams) {
-  return request('range/lh', {
+  return request('/api/range/lh', {
     params,
   });
 }
