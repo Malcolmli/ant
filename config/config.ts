@@ -73,9 +73,9 @@ export default defineConfig({
     },
     {
       name: '数据查询',
-      icon: 'smile',
-      path: '/emptypage',
-      component: './EmptyPage',
+      icon: 'table',
+      path: 'tushare',
+      component: './TushareList',
     },
     {
       component: './404',

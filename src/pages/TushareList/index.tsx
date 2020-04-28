@@ -5,8 +5,8 @@ import ProTable, { ProColumns, ActionType } from '@ant-design/pro-table';
 import { SorterResult } from 'antd/es/table/interface';
 import moment from 'moment';
 
-import { TableListItem } from './data.d';
-import { queryRule } from './service';
+import { TableListItem } from './data';
+import { queryRangeLH } from './service';
 
 
 const TableList: React.FC<{}> = () => {
@@ -85,7 +85,7 @@ const TableList: React.FC<{}> = () => {
             </span>
           </div>
         )}
-        request={(params) => queryRule(params)}
+        request={(params) => queryRangeLH(params)}
         columns={columns}
         rowSelection={{}}
       />
